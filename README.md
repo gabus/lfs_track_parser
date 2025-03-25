@@ -1,6 +1,12 @@
 ### Activate virtual environment
+Windows
 ```bash
 .venv/Activate/Scripts
+```
+
+Linux/Mac
+```bash
+source .venv/Activate/bin
 ```
 
 ### Decode .lyt track file 
@@ -20,6 +26,13 @@ AU1_FG_2023_practise.lyt
 AU1_FG2023_R1.lyt
 AU1_LX_week3.lyt
 ```
+
+### Headers are generated automatically
+Example
+```text
+signature=b'LFSLYT' version=0 revision=252 num_added_objects=72 laps=1 flags=8
+```
+
 
 ### Track json example
 ```json
