@@ -11,14 +11,19 @@ parser = argparse.ArgumentParser(description="Process to decode .lyt tracks into
 # Add the arguments
 parser.add_argument('-i', '--input_file', type=str, required=True, help='.lyt file destination')
 parser.add_argument('-o', '--output_file', type=str, required=True, help='Path where the output json should be saved')
+parser.add_argument('-x', '--x_offset', type=int, required=False, default=-30, help='x coordinate offset (track does not start at 0,0)')
+parser.add_argument('-y', '--y_offset', type=int, required=False, default=-1000, help='y coordinate offset (track does not start at 0,0)')
 
 # Parse the command line arguments
 args = parser.parse_args()
 
+x_global_offset = args.x_offset
+y_global_offset = args.y_offset
+
 
 def encode_data(obj):
-	x = meters_to_lfs_x(obj['position']['x'])
-	y = meters_to_lfs_y(obj['position']['y'])
+	x = meters_to_lfs_x(obj['position']['x'] + x_global_offset)
+	y = meters_to_lfs_y(obj['position']['y'] + y_global_offset)
 	z = meters_to_lfs_z(obj['position']['z'])
 	rotation = degrees_to_lfs_rotation(obj['rotation'])
 	object_type = get_object_index(obj['type'])
