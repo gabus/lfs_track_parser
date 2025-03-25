@@ -4,15 +4,20 @@ Due to weird LFS variable format, there will always be precision loss for x, y, 
 
 Store tracks file in `G:\Games\Live for Speed\data\layout` folder. Sometimes LFS doesn't refresh the track so need to restart the game
 
+### Create virtual environment
+```bash
+python -m venv venv
+```
+
 ### Activate virtual environment
 Windows
 ```bash
-.venv/Activate/Scripts
+venv/Activate/Scripts
 ```
 
 Linux/Mac
 ```bash
-source .venv/Activate/bin
+source venv/Activate/bin
 ```
 
 ### Decode .lyt track file 
