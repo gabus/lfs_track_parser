@@ -52,6 +52,8 @@ signature=b'LFSLYT' version=0 revision=252 num_added_objects=72 laps=1 flags=8
 ### Track coordinates x(-30; 60), y(-1000; -600)
 ![lfs_track_coordinates.png](images/lfs_track_coordinates.png)
 
+### Rotation reference
+![lfs_rotation.png](images/lfs_rotation.png)
 
 ### Track json example
 ```json
